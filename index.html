@@ -4,33 +4,42 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.css" />
     <title>Adaptive+Responsive</title>
   </head>
   <body>
     <div class="wrapper">
       <header class="header">
-       <div class="menu__burger container">
+       <div class="menu__burger">
         <div class="logo"><img src="/img/assassins_creed_logo.png" alt="">Lorem, ipsum dolor.</div>
-        <div class="burger">
-          <span></span>
-        </div>
-      <ul class="list">
-        <li>Lorem</li>
-        <li>Lorem</li>
-        <li>Lorem</li>
-        <li>Lorem</li>
-        <li>Lorem</li>
-      </ul>
+        <div class="burger__cont">
+          <span class="burger"></span>
+        </div>                                                                                                   
+      </div>
+      <div class="menu__container">
+        <ul class="list">
+          <li>Lorem</li>
+          <li>Lorem</li>
+          <li>Lorem</li>
+          <li>Lorem</li>
+          <li>Lorem</li>
+        </ul>
       </div>
       </header>
       <main class="main">
        <div class="main__cont container">
-        <div class="first"> 
-          <div class="first__item"><img src="img/ac_mirage.jpg" alt="AC Mirage"></div>
-          <div class="first__item"><img src="img/ac_odyssey.jpg" alt="AC Odyssey"></div>
-          <div class="first__item"><img src="img/ac_origins.jpg" alt="AC Origins"></div>
-          <div class="first__item"><img src="img/ac_valhalla.jpg" alt="AC Valhalla"></div>  
+        <div class="swiper first">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="/img/ac_mirage.jpg" alt="AC Mirage" class="slide-image"></div>
+            <div class="swiper-slide"><img src="/img/ac_odyssey.jpg" alt="AC Odyssey" class="slide-image"></div>
+            <div class="swiper-slide"><img src="/img/ac_origins.jpg" alt="AC Origins" class="slide-image"></div>
+            <div class="swiper-slide"><img src="/img/ac_valhalla.jpg" alt="AC Origins" class="slide-image"></div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>        
+          <!-- If we need scrollbar -->
+          <div class="swiper-scrollbar"></div>
         </div>
         <div class="second">
           <div class="second__item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate ducimus officiis eaque illum veniam facilis incidunt dolorum at molestiae maiores, quia optio suscipit nesciunt deleniti maxime ad excepturi autem. Sit!</div>
@@ -64,6 +73,7 @@
 <div class="footer_div container">Lorem ipsum dolor sit amet.</div>
       </footer>
     </div>
-    <script src="js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script type="module" src="js/index.js"></script>
   </body>
 </html>

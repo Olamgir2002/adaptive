@@ -119,18 +119,30 @@ body {
 }
 .header{
   flex: 0 1 auto;
-  width: 101vw;
+  width: 100vw;
   background: #0C141C;
   padding: 20px;
   color: white;
   position: fixed;
+  z-index: 55;
   transition: all 0.5s ease;
-}
-.menu__burger{
   display: flex;
   justify-content: space-between;
+}
+.menu__burger{
   position: relative;
-  z-index: 1;
+  z-index: 999;
+  display: flex;
+  justify-content: flex-start;
+  justify-content: space-between;
+}
+@media (max-width: 750px) {
+  .header{
+    padding: 10px;
+  }
+  .menu__burger{
+    width: 100%;
+  }
 }
 .logo{
   display: flex;
@@ -157,7 +169,7 @@ body {
     max-width: 30px;
    }
 }
-.burger{
+.burger__cont{
   position: relative;
   display: none;
   width: 30px;
@@ -165,36 +177,50 @@ body {
   cursor: pointer;
 }
  @media (max-width: 750px) {
-   .burger{
+   .burger__cont{
     display: block;
     z-index: 1;
    }
  }
-.burger span{
+.burger{
   display: block;
   height: 1px;
   width: 30px;
   background: white;
   position: absolute;
   top: 50%;
-  
 }
-.burger span::before{
+.burger::before{
   z-index: 3;
   content: '';
   height: 1px;
   width: 30px;
   background: white;
   position: absolute;
-  top: 7px;
+ top: 7px;
 }
-.burger span::after{
+.burger::after{
   content: '';
   height: 1px;
   width: 30px;
   background: white;
   position: absolute;
   top: -7px;
+}
+.burgerx{
+  transform: rotate(45deg);
+}
+.burgerx::before{
+  transform: rotate(90deg);
+  top: 0;
+}
+.burgerx::after{
+  display: none;
+}
+.menu__container{
+  display: flex;
+  align-items: center;
+  padding: 0 10px 0 0;
 }
 .list{
   flex: 0 0 30%;
@@ -208,14 +234,14 @@ body {
     opacity: 0;
     padding: 20px;
     align-items: flex-start;
-    top: 60px;
-    left: -20px;
+    top: 100%;
+    left: 0;
     width: 101vw;
     height: 100vh;
     background: #4D5A54;
     position: absolute;
+    z-index: 0;
     flex-direction: column;
-    
   }
 }
 .active{
@@ -239,19 +265,19 @@ body {
     padding: 90px 0 0 0;
    }
  }
-.first{
+.first__wrapper{
   display: flex;
   gap: 10px;
   padding: 10px;
 }
-.first div{
+.first__wrapper div{
   flex: 1 1 25%;
 }
 @media (max-width: 750px) {
-  .first{
+  .first__wrapper{
     flex-direction: column;
   }
-  .first div{
+  .first__wrapper div{
     width: 100%;
     height: auto;
   }
@@ -276,6 +302,12 @@ body {
   background: white;
   color: black;
   
+}
+.swiper-pagination-bullet{
+  background: white;
+}
+.swiper-pagination-bullet-active{
+  background-color: white;
 }
 .footer{
   flex: 0 1 auto;
